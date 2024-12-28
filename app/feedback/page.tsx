@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+export const runtime = "edge";
+
 export default function ShareThoughtsPage() {
   return (
     <>
@@ -12,16 +14,17 @@ export default function ShareThoughtsPage() {
             Share Your Thoughts
           </h1>
           <p className="mt-4 text-xl text-gray-700">
-            We’d love to hear any thoughts you’re willing to share! Know that we
-            read every piece of feedback, and that it is this project’s guiding
-            light.
+            We’d love to hear any thoughts you&apos;re willing to share! Know
+            that we read every piece of feedback, and that it is this
+            project&apos;s guiding light.
           </p>
           <p className="mt-4 text-gray-700">
-            All we ask is that you be respectful in your communication. It's
-            100% ok if you have strong negative feelings about any aspect of the
-            project - we want to hear them! That said, everyone working on this
-            project is a passion-driven volunteer who is truly doing their best
-            - please keep this in mind as you share your thoughts 😊
+            All we ask is that you be respectful in your communication.
+            It&apos;s 100% ok if you have strong negative feelings about any
+            aspect of the project - we want to hear them! That said, everyone
+            working on this project is a passion-driven volunteer who is truly
+            doing their best - please keep this in mind as you share your
+            thoughts 😊
           </p>
         </section>
 
@@ -75,8 +78,8 @@ export default function ShareThoughtsPage() {
                 Civic Tech Toronto hacknight
               </a>
               . These happen every Tuesday 7-9pm, both in-person somewhere in
-              Toronto and over Zoom! They’re full of friendly people working to
-              make our city better and having fun doing it 😊.
+              Toronto and over Zoom! They&apos;re full of friendly people
+              working to make our city better and having fun doing it 😊.
             </li>
           </ul>
         </section>

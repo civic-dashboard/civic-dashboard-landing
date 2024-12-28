@@ -2,6 +2,8 @@ import Layout from "../layout";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+export const runtime = "edge";
+
 export default function About() {
   return (
     <Layout>
@@ -17,7 +19,7 @@ export default function About() {
                 Why We Exist
               </h2>
               <p className="text-gray-700 mb-6">
-                In brief, we're regular Torontonians who believe:
+                In brief, we&apos;re regular Torontonians who believe:
               </p>
               <ul className="space-y-4 mb-8">
                 <li>
@@ -26,8 +28,9 @@ export default function About() {
                   about it should be universally accessible.
                 </li>
                 <li>
-                  A democracy is only democratic if it's accessible, and ours
-                  currently isn't for the vast majority of its residents.
+                  A democracy is only democratic if it&apos;s accessible, and
+                  ours currently isn&apos;t for the vast majority of its
+                  residents.
                 </li>
                 <li>
                   A more engaged democracy is a more representative and
@@ -43,14 +46,15 @@ export default function About() {
               </ul>
               <div className="space-y-6">
                 <p>
-                  We think that people care a lot, they just aren't given the
-                  right tools to translate that passion into democratic
+                  We think that people care a lot, they just aren&apos;t given
+                  the right tools to translate that passion into democratic
                   engagement. We believe a more accessible, lower-friction
                   democracy will be adopted more widely, will be more
-                  representative of our city's population and its desires, will
-                  be engaged with far more often than just during elections, and
-                  will contribute to a more bought-in, people-centric, and
-                  flourishing city - and that that's worth working on.
+                  representative of our city&apos;s population and its desires,
+                  will be engaged with far more often than just during
+                  elections, and will contribute to a more bought-in,
+                  people-centric, and flourishing city - and that that&apos;s
+                  worth working on.
                 </p>
                 <p>
                   Lastly, we believe that a small group of humble, ambitious,
@@ -81,21 +85,22 @@ export default function About() {
               </p>
               <ul className="space-y-4 mb-8">
                 <li>
-                  We're not for profit - no one is making money off of this, and
-                  no one ever will. This is made by people who care and come
-                  together, so that people can more easily care and come
-                  together, for the benefit of all.
+                  We&apos;re not for profit - no one is making money off of
+                  this, and no one ever will. This is made by people who care
+                  and come together, so that people can more easily care and
+                  come together, for the benefit of all.
                 </li>
                 <li>
                   We keep costs low, we use volunteer labour, and we are
                   thoughtful and self-critical about the pressures and
-                  incentives we exist under. We're building this as long-term
-                  critical public infrastructure - thoughtfully, prioritizing
-                  public input and stability, and without profit in mind.
+                  incentives we exist under. We&apos;re building this as
+                  long-term critical public infrastructure - thoughtfully,
+                  prioritizing public input and stability, and without profit in
+                  mind.
                 </li>
                 <li>
-                  We're 100% volunteer driven - and we welcome all
-                  contributions! Democracy's not gonna upgrade itself.
+                  We&apos;re 100% volunteer driven - and we welcome all
+                  contributions! Democracy&apos;s not gonna upgrade itself.
                 </li>
               </ul>
               <div className="space-y-6">
@@ -110,9 +115,9 @@ export default function About() {
                   .
                 </p>
                 <p>
-                  We're an open organization - that means we default to showing
-                  everyone everything, including our works in progress! As a
-                  start, you can find:
+                  We&apos;re an open organization - that means we default to
+                  showing everyone everything, including our works in progress!
+                  As a start, you can find:
                 </p>
                 <ul className="space-y-4 mb-8">
                   <li>
@@ -148,8 +153,9 @@ export default function About() {
                   </li>
                 </ul>
                 <p>
-                  If there's something you want to know about our organization
-                  or work but can't see below, it's due to one of:
+                  If there&apos;s something you want to know about our
+                  organization or work but can&apos;t see below, it&apos;s due
+                  to one of:
                 </p>
                 <ul className="space-y-4 mb-8">
                   <li>
@@ -192,10 +198,11 @@ export default function About() {
                     Civic Tech Toronto
                   </a>{" "}
                   - a completely volunteer-run weekly civic tech lecture and
-                  work session series that hasn't missed a Tuesday in almost a
-                  decade! If you're interested in learning more about projects
-                  like this one, the civic technology space, and meeting folks
-                  passionate about it in Toronto, come to one of the{" "}
+                  work session series that hasn&apos;t missed a Tuesday in
+                  almost a decade! If you&apos;re interested in learning more
+                  about projects like this one, the civic technology space, and
+                  meeting folks passionate about it in Toronto, come to one of
+                  the{" "}
                   <a
                     href="https://guild.host/ctto/events"
                     target="_blank"

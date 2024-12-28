@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pages:build": "npx @cloudflare/next-on-pages"
   },
   "dependencies": {
     "next": "15.1.2",
@@ -14,6 +15,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.7",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": ">=20.0.0",
