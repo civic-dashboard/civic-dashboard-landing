@@ -1,114 +1,13 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
-
-const menuItems = [
-  { label: "Home", href: "#" },
-  {
-    label: "How Council Works",
-    href: "https://docs.google.com/document/d/1e5UJrM4vsqLCGmxp4x9H-45kmnq8dAK3RLaPvooJWw4/edit?usp=sharing",
-  },
-  {
-    label: "Search",
-    href: "https://nextjs-opensearch.d2psjv0lhudilg.amplifyapp.com/",
-  },
-  { label: "Actions", href: "https://actions.civicdashboard.ca" },
-  {
-    label: "Councillors",
-    href: "https://civic-dashboard-councillors.vercel.app/councillors",
-  },
-  {
-    label: "About Us",
-    href: "https://citizendashboard.notion.site/Onboarding-8ca9014fe10c493ea6ddd4502132ce10 ",
-  },
-  {
-    label: "Feedback",
-    href: "https://docs.google.com/forms/d/e/1FAIpQLSdflztQAYf0lNxfQjIKy58JM1suOHsoxRZHWycS5SfMkcTNHg/viewform?usp=sharing ",
-  },
-];
-
-const gradientAnimation = `
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-`;
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { menuItems } from "@/constants/navigation";
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-      <style jsx global>
-        {gradientAnimation}
-      </style>
-
-      {/* Header */}
-      <header className="sticky top-0 z-10 backdrop-blur-md bg-white/80 dark:bg-gray-800/80 shadow-lg">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center">
-              <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
-                Civic Dashboard
-              </span>
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {menuItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
-
-            {/* Mobile/Tablet menu button */}
-            <div className="lg:hidden flex items-center">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-                aria-label="Toggle menu"
-              >
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          {/* Mobile/Tablet Menu - with animation */}
-          {isMenuOpen && (
-            <div className="lg:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-lg mt-2 shadow-xl">
-                {menuItems.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    className="block px-3 py-2 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 hover:bg-blue-50 dark:hover:text-blue-400 dark:hover:bg-gray-700 transition-all duration-200"
-                  >
-                    {item.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
-        </nav>
-      </header>
+      <Header />
 
       {/* Hero Section - with animation and gradient */}
       <section className="relative h-[80vh] bg-gradient-to-br from-blue-900 to-purple-900">
@@ -135,13 +34,13 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <a
-                href="https://citizendashboard.notion.site/Onboarding-8ca9014fe10c493ea6ddd4502132ce10"
+                href="/about"
                 className="px-8 py-4 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-all transform hover:scale-105"
               >
                 Learn More
               </a>
               <a
-                href="https://calendly.com/d/ckm5-wgb-xrh/30-minute-user-interview"
+                href="/join"
                 className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-medium hover:bg-white/10 transition-all transform hover:scale-105"
               >
                 Get Involved
@@ -151,7 +50,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Main Content  */}
+      {/* Main Content */}
       <main className="flex-grow py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -227,7 +126,7 @@ export default function Home() {
               together
             </p>
             <a
-              href="https://calendly.com/d/ckm5-wgb-xrh/30-minute-user-interview"
+              href="/join"
               className="inline-block bg-white text-gray-900 px-8 py-4 rounded-full font-medium hover:bg-gray-100 transition-all transform hover:scale-105"
             >
               Get Involved
@@ -236,118 +135,7 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Footer  */}
-      <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-            {/* Navigation Links Column */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Navigation
-              </h3>
-              <ul className="space-y-3">
-                {menuItems.map((item) => (
-                  <li key={item.label}>
-                    <a
-                      href={item.href}
-                      className="hover:text-blue-400 transition-colors duration-200 block"
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Contact Column */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Contact
-              </h3>
-              <p className="hover:text-blue-400 transition-colors duration-200">
-                teamcivicdashboard@gmail.com
-              </p>
-            </div>
-
-            {/* Legal Links Column */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Legal
-              </h3>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-400 transition-colors duration-200"
-                  >
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-400 transition-colors duration-200"
-                  >
-                    Terms of Service
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-blue-400 transition-colors duration-200"
-                  >
-                    Support
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Social & Newsletter Column */}
-            <div className="space-y-6">
-              <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Stay Connected
-              </h3>
-              <div className="flex space-x-6">
-                <a
-                  href="#"
-                  className="hover:text-blue-400 transition-colors duration-200"
-                >
-                  Twitter
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-blue-400 transition-colors duration-200"
-                >
-                  LinkedIn
-                </a>
-                <a
-                  href="https://github.com/civic-dashboard"
-                  className="hover:text-blue-400 transition-colors duration-200"
-                >
-                  GitHub
-                </a>
-              </div>
-
-              <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
-                Subscribe to Newsletter
-              </button>
-
-              <a
-                href="https://civictech.ca/"
-                className="block text-center py-2 px-4 bg-white/10 rounded-lg hover:bg-white/20 transition-all duration-200 transform hover:scale-105"
-              >
-                Civic Tech Toronto
-              </a>
-            </div>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-gray-700/50 text-center">
-            <p className="text-gray-400">
-              &copy; 2024 Civic Dashboard. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
