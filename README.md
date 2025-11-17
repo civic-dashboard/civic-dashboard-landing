@@ -1,3 +1,5 @@
+# This is no longer being maintened, please refer instead to https://github.com/civic-dashboard/civic-dashboard-web
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
